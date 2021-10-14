@@ -2215,15 +2215,16 @@ a:hover {
 .address__title {
     font-size: 32px;
     font-weight: 400;
-    margin: 20px 0;
+    margin: 20px 0 60px;
     text-align: center;
 }
 
 .address__info {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     grid-column: span 6;
-    padding: 30px 0 0 290px;
+    padding: 0 0 0 290px;
 }
 
 @media (max-width: 998px) {
@@ -2240,22 +2241,95 @@ a:hover {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
     .address__info {
         grid-column: span 12;
         flex-direction: column;
+        margin: 0 auto;
     }
+}
+
+.address__item {
+    position: relative;
+    margin-left: 30px;
 }
 
 @media (max-width: 720px) {
     .address__item {
         margin: 10px;
+        width: 40%;
     }
 }
 
+@media (max-width: 480px) {
+    .address__item {
+        width: 100%;
+    }
+}
+
+.address__item::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    background: url(../img/icon/loc.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+}
+
+.address__item:nth-child(2):before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    background: url(../img/icon/smart.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+}
+
+.address__item:nth-child(3):before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    background: url(../img/icon/mobile.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+}
+
+.address__item:nth-child(4):before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    background: url(../img/icon/email.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+}
+
+.address__item:nth-child(5):before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    background: url(../img/icon/clock.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+}
+
 .address__name {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     margin-bottom: 10px;
     color: #000002;
 }
