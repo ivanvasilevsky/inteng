@@ -86,3 +86,13 @@ document.body.addEventListener("click", () => {
 searching.addEventListener("click", (e) => {
 	e.stopPropagation()
 });
+var map;
+
+DG.then(function () {
+	map = DG.map('map', {
+		center: [43.246863, 76.912749],
+		zoom: 100
+	});
+
+	DG.marker([43.246863, 76.912749]).addTo(map).bindPopup('Inteng');
+});
